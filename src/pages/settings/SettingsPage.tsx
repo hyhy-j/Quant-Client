@@ -64,7 +64,7 @@ export default function SettingsPage() {
             {[
               { key: 'morningReport' as const, label: '시장 리포트 알림', sub: '08:00 / 18:00' },
               { key: 'priceAlert' as const, label: '급등락 알림', sub: '±5% 이상' },
-              { key: 'rebalance' as const, label: '리밸런싱 알림', sub: '매주 월요일 포트폴리오 조정 시' },
+              { key: 'rebalance' as const, label: '리밸런싱 알림', sub: '매주 월요일 새 포트폴리오 추천 시' },
               { key: 'email' as const, label: '이메일 수신', sub: '리포트 이메일' },
             ].map(({ key, label, sub }) => (
               <div key={key} className="flex items-center justify-between">

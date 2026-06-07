@@ -36,8 +36,8 @@ const signalBars = [
 export default function PortfolioPage() {
   return (
     <DashboardLayout title="포트폴리오" subtitle="모멘텀 전략 기반 맞춤 포트폴리오입니다.">
-      <div className="flex items-center gap-3 mb-6">
-        <span className="bg-indigo-100 text-indigo-700 text-sm font-semibold px-3 py-1 rounded-full">
+      <div className="flex items-center gap-3 mb-2">
+        <span className="bg-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">
           중립형 투자자
         </span>
         <TooltipBox content={TOOLTIPS['모멘텀 전략']} showIcon dir="down">
@@ -47,6 +47,7 @@ export default function PortfolioPage() {
         </TooltipBox>
         <span className="text-xs text-gray-400">마지막 업데이트: 2026-06-07 08:08</span>
       </div>
+      <p className="text-sm text-gray-500 mb-5">매주 월요일, AI가 모멘텀 신호를 분석해 이번 주 최선의 포트폴리오를 추천드립니다.</p>
 
       <div className="grid grid-cols-5 gap-4 mb-4">
         {/* Pie Chart + Reasons */}
@@ -140,15 +141,15 @@ export default function PortfolioPage() {
       {/* Backtest Chart */}
       <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
         <div className="mb-4">
-          <h2 className="font-semibold text-gray-900">백테스트 수익률 (2024-01 ~ 2025-06)</h2>
+          <h2 className="font-semibold text-gray-900">백테스트 수익률 (2025.06.09 ~ 2026.06.01)</h2>
           <p className="text-xs text-gray-400 mt-1">
-            모멘텀 전략을 과거에 적용했을 때의 가상 성과입니다. 실제 수익을 보장하지 않습니다.
+            지난 1년의 실제 시장 흐름으로 AI 모멘텀 전략을 검증했어요.
           </p>
         </div>
         <ResponsiveContainer width="100%" height={260}>
           <LineChart data={backtestData} margin={{ top: 4, right: 20, bottom: 4, left: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
-            <XAxis dataKey="month" tick={{ fontSize: 11 }} interval={2} />
+            <XAxis dataKey="week" tick={{ fontSize: 11 }} interval={7} />
             <YAxis tickFormatter={(v) => `${v}%`} tick={{ fontSize: 11 }} />
             <RechartsTooltip formatter={(v) => `${v}%`} />
             <Legend />

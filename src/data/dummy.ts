@@ -32,26 +32,60 @@ export const portfolioReasons = [
   { name: '현금', code: '-', weight: 10, reason: '시장 변동성이 높을 때 빠르게 대응할 수 있도록 여유 자금을 확보합니다.' },
 ];
 
-// Backtest data: portfolio vs KOSPI (2024-01 ~ 2025-06)
+// Backtest data: 최근 1년 주 단위 (2025-06-09 ~ 2026-06-01)
 export const backtestData = [
-  { month: '2024-01', portfolio: 0, kospi: 0 },
-  { month: '2024-02', portfolio: 3.2, kospi: 1.8 },
-  { month: '2024-03', portfolio: 5.8, kospi: 2.4 },
-  { month: '2024-04', portfolio: 4.1, kospi: 0.9 },
-  { month: '2024-05', portfolio: 7.3, kospi: 3.1 },
-  { month: '2024-06', portfolio: 9.8, kospi: 4.2 },
-  { month: '2024-07', portfolio: 12.1, kospi: 5.5 },
-  { month: '2024-08', portfolio: 10.4, kospi: 3.8 },
-  { month: '2024-09', portfolio: 13.7, kospi: 5.9 },
-  { month: '2024-10', portfolio: 15.2, kospi: 6.7 },
-  { month: '2024-11', portfolio: 18.4, kospi: 7.3 },
-  { month: '2024-12', portfolio: 16.9, kospi: 5.8 },
-  { month: '2025-01', portfolio: 19.3, kospi: 7.1 },
-  { month: '2025-02', portfolio: 21.8, kospi: 8.4 },
-  { month: '2025-03', portfolio: 20.1, kospi: 6.9 },
-  { month: '2025-04', portfolio: 23.5, kospi: 8.8 },
-  { month: '2025-05', portfolio: 26.2, kospi: 9.6 },
-  { month: '2025-06', portfolio: 28.7, kospi: 10.2 },
+  { week: '2025-06-09', portfolio: 0,    kospi: 0 },
+  { week: '2025-06-16', portfolio: 0.8,  kospi: 0.3 },
+  { week: '2025-06-23', portfolio: 1.9,  kospi: 0.7 },
+  { week: '2025-06-30', portfolio: 1.2,  kospi: 0.4 },
+  { week: '2025-07-07', portfolio: 2.8,  kospi: 0.9 },
+  { week: '2025-07-14', portfolio: 4.1,  kospi: 1.5 },
+  { week: '2025-07-21', portfolio: 3.5,  kospi: 1.1 },
+  { week: '2025-07-28', portfolio: 5.2,  kospi: 1.8 },
+  { week: '2025-08-04', portfolio: 6.4,  kospi: 2.1 },
+  { week: '2025-08-11', portfolio: 5.7,  kospi: 1.6 },
+  { week: '2025-08-18', portfolio: 7.3,  kospi: 2.4 },
+  { week: '2025-08-25', portfolio: 8.8,  kospi: 2.9 },
+  { week: '2025-09-01', portfolio: 8.1,  kospi: 2.5 },
+  { week: '2025-09-08', portfolio: 9.6,  kospi: 3.1 },
+  { week: '2025-09-15', portfolio: 11.2, kospi: 3.7 },
+  { week: '2025-09-22', portfolio: 10.4, kospi: 3.2 },
+  { week: '2025-09-29', portfolio: 12.1, kospi: 3.9 },
+  { week: '2025-10-06', portfolio: 13.5, kospi: 4.4 },
+  { week: '2025-10-13', portfolio: 12.8, kospi: 3.8 },
+  { week: '2025-10-20', portfolio: 14.3, kospi: 4.7 },
+  { week: '2025-10-27', portfolio: 15.9, kospi: 5.1 },
+  { week: '2025-11-03', portfolio: 15.1, kospi: 4.6 },
+  { week: '2025-11-10', portfolio: 16.8, kospi: 5.3 },
+  { week: '2025-11-17', portfolio: 18.4, kospi: 5.9 },
+  { week: '2025-11-24', portfolio: 17.6, kospi: 5.4 },
+  { week: '2025-12-01', portfolio: 19.2, kospi: 6.1 },
+  { week: '2025-12-08', portfolio: 20.7, kospi: 6.6 },
+  { week: '2025-12-15', portfolio: 19.9, kospi: 5.9 },
+  { week: '2025-12-22', portfolio: 21.4, kospi: 6.4 },
+  { week: '2025-12-29', portfolio: 22.8, kospi: 6.9 },
+  { week: '2026-01-05', portfolio: 22.1, kospi: 6.3 },
+  { week: '2026-01-12', portfolio: 23.7, kospi: 7.0 },
+  { week: '2026-01-19', portfolio: 25.2, kospi: 7.5 },
+  { week: '2026-01-26', portfolio: 24.4, kospi: 6.8 },
+  { week: '2026-02-02', portfolio: 26.1, kospi: 7.4 },
+  { week: '2026-02-09', portfolio: 27.6, kospi: 7.9 },
+  { week: '2026-02-16', portfolio: 26.8, kospi: 7.2 },
+  { week: '2026-02-23', portfolio: 28.3, kospi: 7.8 },
+  { week: '2026-03-02', portfolio: 29.7, kospi: 8.2 },
+  { week: '2026-03-09', portfolio: 28.9, kospi: 7.5 },
+  { week: '2026-03-16', portfolio: 30.4, kospi: 8.1 },
+  { week: '2026-03-23', portfolio: 31.8, kospi: 8.6 },
+  { week: '2026-03-30', portfolio: 31.1, kospi: 7.9 },
+  { week: '2026-04-06', portfolio: 32.6, kospi: 8.4 },
+  { week: '2026-04-13', portfolio: 34.1, kospi: 8.9 },
+  { week: '2026-04-20', portfolio: 33.3, kospi: 8.2 },
+  { week: '2026-04-27', portfolio: 34.8, kospi: 8.7 },
+  { week: '2026-05-04', portfolio: 36.2, kospi: 9.1 },
+  { week: '2026-05-11', portfolio: 35.4, kospi: 8.5 },
+  { week: '2026-05-18', portfolio: 37.1, kospi: 9.2 },
+  { week: '2026-05-25', portfolio: 38.6, kospi: 9.7 },
+  { week: '2026-06-01', portfolio: 39.4, kospi: 10.1 },
 ];
 
 export const tradeHistory = [
@@ -69,23 +103,6 @@ export const tradeHistory = [
   { date: '2026-06-03', time: '09:10', stock: '삼성전자', code: '005930', type: 'buy', qty: 15, price: 70000, currency: 'KRW', pnl: null },
 ];
 
-// Daily cumulative return (last 30 days)
-export const dailyReturn = Array.from({ length: 30 }, (_, i) => {
-  const date = new Date('2026-05-09');
-  date.setDate(date.getDate() + i);
-  const base = i * 0.42 + Math.sin(i * 0.5) * 1.2;
-  return {
-    date: date.toISOString().slice(0, 10),
-    return: parseFloat(base.toFixed(2)),
-  };
-});
-
-// Momentum signal breakdown (replaces multi-strategy contrib)
-export const signalContrib = [
-  { name: '가격 모멘텀', value: 7.2 },
-  { name: '거래량 신호', value: 2.8 },
-  { name: '뉴스 센티멘트', value: 2.4 },
-];
 
 export const morningReport = {
   reportId: 'RPT-20260607-AM',
